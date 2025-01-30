@@ -1,10 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/portfolio/", // IMPORTANT: Set this to your GitHub repository name
+  base: "/myPortfolioPK/", // Set base to the GitHub repo name
   css: {
     modules: {
       localsConvention: "camelCase",

@@ -1,36 +1,26 @@
 {
+  "homepage": "https://parkashkumarcs.github.io/myPortfolioPK/",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://parkashkumarcs.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "vite build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^1.7.9",
-    "node": "^23.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.3"
   },
   "devDependencies": {
-    "@eslint/js": "^9.17.0",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.17.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.16",
     "gh-pages": "^6.3.0",
-    "globals": "^15.14.0",
     "vite": "^6.0.5"
   }
 }
