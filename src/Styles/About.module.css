@@ -1,0 +1,258 @@
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 5%;
+    background-color: #4B0082;
+    animation: fadeIn 1s ease-out;
+}
+
+.aboutContent {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.textContent {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 2rem;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+.mainDescription{
+    color: rgb(209, 202, 202);
+    line-height: 1.6;
+}
+
+.aboutTitle {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.highlight {
+    font-size: 3.2rem;
+    color: #4CAF50;
+    background: linear-gradient(90deg, #f1f1f1, #6287ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.aboutItems {
+    background: #fff;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.aboutItems::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease-out;
+}
+
+.aboutItems:hover::before {
+    left: 0;
+}
+
+.aboutSubtitle {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.aboutDescription {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.aboutList {
+    list-style-type: disc;
+    padding-left: 2rem;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.aboutButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.primaryBtn {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.primaryBtn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.secondaryBtn {
+    background-color: #fff;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+}
+
+.secondaryBtn:hover {
+    background-color: #4CAF50;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.imageContainer {
+    flex: 1;
+    max-width: 45%;
+    position: relative;
+    padding-left: 2rem;
+    opacity: 0;
+    animation: fadeInRight 1.5s ease-out forwards;
+}
+
+.aboutImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.actionSubtitle{
+    font-size: 2.2rem;
+    color: #4CAF50;
+    background: linear-gradient(90deg, #f1f1f1, #6287ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+@media (max-width: 1024px) {
+    .aboutContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textContent {
+        max-width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .imageContainer {
+        max-width: 80%;
+        margin-top: 2rem;
+    }
+
+    .aboutImage {
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutTitle {
+        font-size: 2.5rem;
+    }
+
+    .highlight {
+        font-size: 2rem;
+    }
+
+    .aboutSubtitle {
+        font-size: 1.8rem;
+    }
+
+    .aboutDescription {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutTitle {
+        font-size: 2rem;
+    }
+
+    .highlight {
+        font-size: 1.8rem;
+    }
+
+    .aboutItems {
+        padding: 1rem;
+    }
+
+    .aboutDescription {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+/* The following is animation definitions of each */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

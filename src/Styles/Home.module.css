@@ -1,0 +1,181 @@
+:root{
+    --text-color: #ffffff;
+    --font-family: "Poppins", sans-serif;
+}
+.homeContainer {
+    padding: 20px;
+    background-color: #4B0082;
+}
+
+.homeTitle {
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: var(--font-family);
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    position: relative;
+    background: linear-gradient(90deg, #f1f1f1, #6287ff); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+}
+
+.homeTitle::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 4px;
+    background: #9a5bff;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    opacity: 0.7;
+    transition: width 0.3s ease-in-out;
+}
+
+.homeTitle:hover::after {
+    width: 160px; 
+}
+
+
+/* Card grid */
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Card styles */
+.card {
+    background-color: #8B008B;
+    width: 300px;
+    height: 430px;
+    border-radius: 8px;
+    text-align: center;
+    padding: 0px;
+    box-shadow: 0 4px 8px rgba(12, 11, 11, 0.2);
+    text-decoration: none;
+    color: #333;
+    margin: 20px auto;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 5px 6px 6px rgb(7, 8, 8);
+    transform: scale(1.05);
+}
+
+.cardIcon {
+    font-size: 1.5rem;
+    color: #0b5aee;  
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.cardDescription {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.contentBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    gap: 5px;
+    margin: 10px 80px 0px;
+    padding: 5px;
+}
+
+.cardImageContainer {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.cardImageContainer:hover .cardImage {
+    transform: scale(1.15);
+    filter: brightness(0.85);
+}
+/* Dots container */
+.dotsContainer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .dot:hover {
+    transform: scale(1.2);
+  }
+  
+  .activeDot {
+    background-color: #fff;
+  }
+  
+@media (max-width: 768px) {
+    .homeContainer {
+        margin-left: 0;
+    }
+
+    .homeTitle {
+        font-size: 2rem;
+    }
+
+    .card {
+        height: auto;
+        padding: 15px;
+    }
+
+    .cardTitle {
+        font-size: 1.25rem;
+    }
+
+    .cardDescription {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardGrid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .homeTitle {
+        font-size: 1.75rem;
+    }
+}
