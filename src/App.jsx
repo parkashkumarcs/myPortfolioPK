@@ -16,7 +16,7 @@ function App() {
         {/* Home as the default route */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Project />} />
+        <Route path="/project" element={<Project />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
